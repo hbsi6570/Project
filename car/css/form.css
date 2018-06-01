@@ -1,0 +1,422 @@
+#bg{
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 99998;
+    width: 100%;
+    height: 100%;
+    background: #000;
+    opacity: .2;
+}
+#layer{
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 99999;
+    width: 360px;
+    height: 200px;
+    background: #fff;
+}
+#layer::after{
+    content: '  程序员小妹刁难你呢，看到举着“开启抢约之旅”的小不了吗？点击它就可以约车了~亲抓紧登录吧';
+}
+#btn{
+    width: 70px;
+    height: 30px;
+    background-color: rgb(158,0,34);
+}
+#btn::after{
+    content: '登录';
+}
+#cancel{
+    width: 70px;
+    height: 30px;
+    background-color: rgb(158,0,34);
+}
+#cancel::after{
+    content: '取消';
+}
+.login_pc {
+    overflow: hidden;
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    margin-left: -216px;
+    margin-top: -250px;
+    width: 432px;
+    height: 500px;
+    text-align: center;
+    border: 1px solid rgb(158,0,34);
+    background-color: rgb(86, 83, 100);
+    border-radius: 3px;
+}/*
+.fade .x{
+    position: absolute;
+    right: 35%;
+    top: 25%;
+    z-index: -1;
+    width: 30px;
+    height: 30px;
+    background-color: #fff;
+    border-radius: 50%;
+}
+.fade .x::after{
+    content: 'X';
+    line-height: 10px;
+    text-align: center;
+}*/
+
+.login_pc .logo {
+    width: 50%;
+    height: auto;
+}
+
+.login_pc .logo img {
+    width: 100%;
+    height: auto;
+}
+
+.login_pc .xuanze {
+    margin-bottom: 20px;
+    width: 80%;
+    line-height: 40px;
+    background-color: #fff;
+    border-radius: 5px;
+    box-sizing: border-box;
+    padding: 1px;
+}
+
+.login_pc .xuanze p {
+    width: 50%;
+    height: 100%;
+    margin: 0;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.login_pc .xuanze .act {
+    background-color: rgb(158,0,34);
+    color: #fff;
+    cursor: pointer;
+}
+
+.login_pc .users_login {
+    width: 864px;
+    left: 0;
+}
+
+.login_pc .users_login form {
+    width: 50%;
+    height: auto;
+    float: left
+}
+
+.login_pc .users_login form p {
+    width: 80%;
+    height: 40px;
+    margin-bottom: 10px;
+}
+
+.login_pc .users_login form p input {
+    width: 100%;
+    border-radius: 5px;
+    height: 40px;
+    padding: 0 10px 0 45px;
+}
+
+.login_pc .users_login form .zhuce {
+    color: #fff;
+    height: 18px;
+    line-height: 18px;
+    margin-bottom: 14px;
+}
+
+.login_pc .users_login form .zhuce span {
+    display: inline-block;
+}
+
+.login_pc .users_login form .zhuce span i {
+    border-radius: 3px;
+    width: 18px;
+    height: 18px;
+    border: 2px solid #fff;
+    box-sizing: border-box;
+    float: left;
+    margin-right: 5px;
+}
+
+.login_pc .users_login form .dl .login_btn {
+    font-size: 16px;
+    width: 100%;
+    border: none;
+    height: 40px;
+    background-color: #fff;
+    border-radius: 5px;
+    color: background-color: rgb(158,0,34);
+}
+
+.login_pc .users_login form .zhuce span .bgact {
+    border: none;
+    background: url(../img/对勾.png) no-repeat center center / 80% 80%;
+    background-color: #fff;
+}
+
+.login_pc .users_login form .zhanghao span {
+    height: 100%;
+    width: 40px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    background: url(../img/zhangghao.png) no-repeat center center/70% 70%;
+    background-color: rgb(158,0,34);
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+}
+
+.login_pc .users_login form .mima .mmt {
+    height: 100%;
+    width: 40px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    background: url(../img/mima.png) no-repeat center center/70% 70%;
+    background-color: rgb(158,0,34);
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+}
+
+.login_pc .users_login form .mima .yjb {
+    background: url(../img/yjb.png) no-repeat center center/70% 70%;
+}
+
+.login_pc .users_login form .mima .yjz {
+    background: url(../img/yjz.png) no-repeat center center/70% 70%;
+}
+
+.login_pc .users_login form .mima .yj {
+    height: 100%;
+    width: 40px;
+    position: absolute;
+    right: 0;
+    top: 0;
+    background-color: rgb(158,0,34);
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
+.login_pc .users_login form a {
+    color: #fff;
+}
+
+.register_pc {
+    display: none;
+    position: fixed;
+    left: 50%;
+    top: 65%;
+    padding-top: 50px;
+    padding-bottom: 20px;
+    width: 432px;
+    margin-left: -216px;
+    margin-top: -145px;
+    height: auto;
+    border-radius: 3px;
+    background-color: rgb(86, 83, 100);
+}
+
+.register_pc form {
+    width: 100%;
+    height: auto;
+}
+
+.register_pc form p {
+    width: 80%;
+    height: 40px;
+    margin-bottom: 10px;
+}
+
+.register_pc form p input {
+    width: 100%;
+    border-radius: 5px;
+    height: 40px;
+    padding: 0 10px 0 45px;
+}
+
+.register_pc form .zhuce .zhuce_btn {
+    font-size: 16px;
+    width: 100%;
+    border: none;
+    height: 40px;
+    background-color: #fff;
+    border-radius: 5px;
+    color: rgb(158,0,34);
+}
+
+.register_pc form .zhuce span .bgact {
+    border: none;
+    background: url(../img/对勾.png) no-repeat center center / 80% 80%;
+    background-color: #fff;
+}
+
+.register_pc form .zhanghao span {
+    height: 100%;
+    width: 40px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    background: url(../img/zhangghao.png) no-repeat center center/70% 70%;
+    background-color: rgb(158,0,34);
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+}
+
+.register_pc form .yzm input {
+    padding: 5px 10px 5px 45px;
+}
+
+.register_pc form .yzm .mmt {
+    height: 100%;
+    width: 40px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    background: url(../img/yzm.png) no-repeat center center/70% 70%;
+    background-color: rgb(158,0,34);
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+}
+
+.register_pc .yzm .hqyzm {
+    position: absolute;
+    right: 5px;
+    top: 5px;
+    width: 80px;
+    height: 30px;
+    font-size: 12px;
+    line-height: 30px;
+    padding: 0 5px;
+    background-color: rgb(158,0,34);
+    color: #fff;
+}
+
+.register_pc .guanbi {
+    right: 35px;
+    top: 10px;
+    width: 20px;
+    height: 20px;
+    background: url(../img/guanbi.png) no-repeat center center/100% 100%;
+}
+
+.register_pc form .miam .mmt {
+    height: 100%;
+    width: 40px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    background: url(../img/mima.png) no-repeat center center/70% 70%;
+    background-color: rgb(158,0,34);
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+}
+
+.zhmm_pc {
+    display: none;
+    position: fixed;
+    left: 50%;
+    top: 65%;
+    padding-top: 50px;
+    padding-bottom: 40px;
+    width: 432px;
+    margin-left: -216px;
+    margin-top: -145px;
+    height: auto;
+    border-radius: 3px;
+    background-color: rgb(86, 83, 100);
+}
+
+.zhmm_pc form {
+    width: 100%;
+    height: auto;
+}
+
+.zhmm_pc form p {
+    width: 80%;
+    height: 40px;
+    margin-bottom: 10px;
+}
+
+.zhmm_pc form p input {
+    width: 100%;
+    border-radius: 5px;
+    height: 40px;
+    padding: 0 10px 0 45px;
+}
+
+.zhmm_pc form .zhmm .zhmm_btn {
+    font-size: 16px;
+    width: 100%;
+    border: none;
+    height: 40px;
+    background-color: #fff;
+    border-radius: 5px;
+    color: rgb(158,0,34);
+}
+
+.zhmm_pc form .zhanghao span {
+    height: 100%;
+    width: 40px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    background: url(../img/zhangghao.png) no-repeat center center/70% 70%;
+    background-color: rgb(158,0,34);
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+}
+
+.zhmm_pc form .yzm input {
+    padding: 5px 10px 5px 45px;
+}
+
+.zhmm_pc form .yzm .mmt {
+    height: 100%;
+    width: 40px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    background: url(../img/yzm.png) no-repeat center center/70% 70%;
+    background-color: rgb(158,0,34);
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+}
+
+.zhmm_pc .yzm .hqyzm {
+    position: absolute;
+    right: 5px;
+    top: 5px;
+    width: 80px;
+    height: 30px;
+    font-size: 12px;
+    line-height: 30px;
+    padding: 0 5px;
+    background-color: rgb(158,0,34);
+    color: #fff;
+}
+
+.zhmm_pc .guanbi {
+    right: 35px;
+    top: 10px;
+    width: 20px;
+    height: 20px;
+    background: url(../img/guanbi.png) no-repeat center center/100% 100%;
+}
+
+.zhmm_pc form .xinmm .mmt {
+    height: 40px;
+    width: 40px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    background: url(../img/mima.png) no-repeat center center/70% 70%;
+    background-color: rgb(158,0,34);
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;

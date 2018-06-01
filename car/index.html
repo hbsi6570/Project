@@ -1,0 +1,899 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+	<title>驾校约车</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="keywords" content="在线约车,手机约车,驾校约车,约车网" />
+	<meta name="description" content="一款驾考约车应用。支持驾校报名、约车训练、考试约考等。通过手机APP开启快乐学车模式。" />
+	<script type="application/x-javascript">
+        addEventListener("load", function () {
+            setTimeout(hideURLbar, 0);
+        }, false);
+
+        function hideURLbar() {
+            window.scrollTo(0, 1);
+        }
+	</script>
+	<link href="css/bootstrap.css" rel="stylesheet" type="text/css" media="all">
+	<link href="css/font-awesome.css" rel="stylesheet">
+	<link href="css/style.css" rel='stylesheet' type='text/css' media="all">
+	<link rel='stylesheet' type='text/css' href='css/jquery.easy-gallery.css' />
+	<link href="css/popuo-box.css" rel="stylesheet" type="text/css" media="all" />
+	<link rel="stylesheet" href="css/form.css">
+	<link rel="stylesheet" href="css/iconfont.css">
+	<link rel="stylesheet" href="css/reset.css">
+	<link rel="stylesheet" href="css/pace-theme-flash.min.css">
+	<script src="js/pace.min.js"></script>
+</head>
+
+<body>
+<!--<script>
+    var cw=document.documentElement.clientWidth || document.body.clientWidth;
+    var ch=document.documentElement.clientHeight || document.body.clientHeight;
+    var layer=document.getElementById('layer');
+    var bg=document.createElement('div');
+    bg.id='bg';
+    document.body.appendChild(bg);
+    var layer=document.createElement('div');
+    layer.id='layer';
+    layer.style.top=(ch-300)/2+'px';
+    layer.style.left=(cw-300)/2+'px';
+    document.body.appendChild(layer);
+    var login=document.createElement('div');
+    login.id='login';
+    layer.appendChild(login);
+    var cancel=document.createElement('div');
+    cancel.id='cancel';
+    layer.appendChild(cancel);
+    layer.onclick=function(){
+        document.body.removeChild(layer);
+        document.body.removeChild(bg);
+    }
+</script>-->
+<div class="header-outs">
+	<div class="header-w3layouts">
+		<div class="header-bar">
+			<nav class="navbar navbar-default">
+				<div class="navbar-header navbar-left">
+					<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+						<span class="sr-only">Toggle navigation</span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</button>
+					<h1><a class="navbar-brand" href="index.html">ABOUT<span style="padding: 0 10px; font-size: 40px; color: #fff;" class="iconfont icon-icon-test" aria-hidden="true"></span>Car</a></h1>
+				</div>
+				<!-- Collect the nav links, forms, and other content for toggling -->
+				<div class="collapse navbar-collapse navbar-right" id="bs-example-navbar-collapse-1">
+					<nav>
+						<ul class="nav navbar-nav">
+							<li class="active"><a href="index.html">首页</a></li>
+							<li><a href="#about" class="scroll">关于我们</a></li>
+							<li><a href="#services" class="scroll">在线约车</a></li>
+							<li><a href="#gallery" class="scroll">科目介绍</a></li>
+							<li><a href="#price" class="scroll">驾校推荐</a></li>
+							<li><a href="#testimonials" class="scroll">教练风采</a></li>
+							<li><a href="#contact" class="scroll">联系我们</a></li>
+						</ul>
+					</nav>
+				</div>
+			</nav>
+		</div>
+
+		<div class="clearfix"> </div>
+
+	</div>
+
+	<!-- Slideshow 4 -->
+	<div class="slider">
+		<div class="callbacks_container">
+			<ul class="rslides" id="slider4">
+				<li>
+					<div class="slider-img">
+						<div class="container">
+							<div class="slider-info">
+								<h4> <span class="home-banner">O</span>ur <span class="home-banner">A</span>wesome <span class="home-banner">P</span>ets</h4>
+								<p>Quis autem vel eum iure reprehderit.</p>
+								<div class="outs_more-buttn">
+									<a href="#" data-toggle="modal" data-target="#myModal">现在登录</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</li>
+				<li>
+					<div class="slider-img ">
+						<div class="container">
+							<div class="slider-info">
+								<h4><span class="home-banner">L</span>ovely And <span class="home-banner">C</span>ute <span class="home-banner">P</span>ets</h4>
+								<p>Quis autem vel eum iure reprehderit.</p>
+								<div class="outs_more-buttn">
+									<a href="#" data-toggle="modal" data-target="#myModal">现在登录</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</li>
+			</ul>
+		</div>
+		<div class="clearfix"> </div>
+	</div>
+	<!-- This is here just to demonstrate the callbacks -->
+	<!-- <ul class="events">
+  <li>Example 4 callback events</li>
+</ul>-->
+	<!-- //banner -->
+	<!-- modal -->
+	<div class="modal about-modal fade" id="myModal" tabindex="-1" role="dialog">
+		<div class="login_pc tc">
+			<div class="logo dpib"><img src="img/logo.png" alt=""></div>
+			<div class="xuanze dpib"><p class="dpib xy_tab act">学员</p><p class="dpib jl_tab">教练</p></div>
+			<div class="users_login clearfix pa">
+				<form action="" class="dpib xy_tabs">
+					<p class="dpib zhanghao pr"><span class="mmt"></span><input type="text" maxlength="11" placeholder="请输入手机号"></p>
+					<p class="dpib mima pr"><span class="mmt"></span><input type="password" maxlength="20" placeholder="密码"><span class="yj yjb"></span></p>
+					<p class="zhuce dpib"><span class="fl"><i class="xuank"></i>记住密码</span><span class="fr"><a id="reg" href="javascript:;">立即注册</a></span></p>
+					<p class="dpib dl"><button type="button" class="login_btn">登录</button></p>
+					<p class="wjmm dpib"><a href="javascript:;" id="forg">忘记密码?</a></p>
+				</form>
+				<form action="" class="dpib jl_tabs">
+					<p class="dpib zhanghao pr"><span class="mmt"></span><input type="text" maxlength="11" placeholder="教练工号"></p>
+					<p class="dpib mima pr"><span class="mmt"></span><input type="password" maxlength="20" placeholder="密码"><span class="yj yjb"></span></p>
+					<p class="zhuce dpib"><span class="fl"><i class="xuank"></i>记住密码</span></p>
+					<p class="dpib dl"><button type="button" class="login_btn">登录</button></p>
+				</form>
+			</div>
+		</div>
+        <div class="register_pc tc" id="regbk">
+            <a id="close" href="javascript:;"><div class="guanbi pa"></div></a>
+            <form action="" class="dpib xy_tabs">
+                <p class="dpib zhanghao pr"><span class="mmt"></span><input type="text" maxlength="11" placeholder="请输入手机号"></p>
+                <p class="dpib yzm pr"><span class="mmt"></span><input type="password" maxlength="20" placeholder="验证码"><span class="hqyzm">获取验证码</span></p>
+                <p class="dpib miam pr"><span class="mmt"></span><input type="password" maxlength="20" placeholder="请输入密码"></p>
+                <p class="dpib zhuce"><button type="button" class="zhuce_btn">注册</button></p>
+            </form>
+        </div>
+        <div class="zhmm_pc tc" id="forget">
+            <a id="pwd" href="javascript:;"><div class="guanbi pa"></div></a>
+            <form action="" class="dpib xy_tabs">
+                <p class="dpib zhanghao pr"><span class="mmt"></span><input type="text" maxlength="11" placeholder="请输入手机号"></p>
+                <p class="dpib yzm pr"><span class="mmt"></span><input type="password" maxlength="20" placeholder="验证码"><span class="hqyzm">获取验证码</span></p>
+                <p class="dpib xinmm pr"><span class="mmt"></span><input type="text" maxlength="20" placeholder="输入新密码"></p>
+                <p class="dpib zhmm"><button type="button" class="zhmm_btn">找回密码</button></p>
+            </form>
+        </div>
+        <script>
+            var reg=document.getElementById('reg');
+            var reg2=document.getElementById('regbk');
+            reg.onclick=function () {
+                if(reg2.style.display=='block'){
+                    reg2.style.display='none';
+                }else{
+                    reg2.style.display='block';
+                }
+            }
+            var clo=document.getElementById('close');
+            var reg2=document.getElementById('regbk');
+            clo.onclick=function () {
+                if(reg2.style.display=='block'){
+                    reg2.style.display='none';
+                }else{
+                    reg2.style.display='block';
+                }
+            }
+            var fog=document.getElementById('forget');
+            var clos=document.getElementById('pwd');
+            var forg=document.getElementById('forg');
+            clos.onclick=function () {
+                if(fog.style.display=='block'){
+                    fog.style.display='none';
+                }else{
+                    fog.style.display='block';
+                }
+            }
+            forg.onclick=function () {
+                if(fog.style.display=='block'){
+                    fog.style.display='none';
+                }else{
+                    fog.style.display='block';
+                }
+            }
+        </script>
+	</div>
+</div>
+<!-- //modal -->
+<!--About-->
+<div class="about" id="about">
+	<div class="container">
+		<div class="about-top-grids">
+			<div class="col-md-7 about-top-grid">
+				<h2>关于我们</h2>
+				<div class="about-para">
+					<p>保定驾校，是经过保定市公安交通局、保定市交委公路运输管理处（驾培办）审核批准的一类（一级）机动车驾校，是在全市享有盛誉的驾校，谨训驾校具有优越的办学条件，师资力量、教学水准、办学规模居行业前列，教学培训基地近30个，遍布全市各大城区街社。
+
+						鑫谨训驾校现有各类教学培训车辆80余台，理论培训教室300多平，教学设施、教学教具（电子桩、电子路、模拟操作机、电子教学、网络教学、驾校网站）技术先进，配套齐全。谨训驾校有教职员工、服务人员100多人，专职教练员60余人，教练人员都具有较高的教学技能、教学水平和资深丰富的教学经验。谨训驾校并配有教学硬件保障服务系统的汽车修理场和修理技术人员。鑫谨训驾校逐步建立完善了科学严谨规范的现代化管理制度，和竞争激励机制，廉政机制、考核机制等。品牌培训做保障、精心施教保质量、廉政建设树口碑、诚信服务创品牌。</p>
+				</div>
+			</div>
+			<div class="col-md-5 pope banner-agileits-btm" id="video">
+				<div id="small-dialog1" class="mfp-hide w3ls_small_dialog wthree_pop">
+					<div class="agileits_modal_body">
+						<iframe src="https://player.vimeo.com/video/72859932?"></iframe>
+
+					</div>
+				</div>
+			</div>
+			<div class="clearfix"> </div>
+		</div>
+	</div>
+</div>
+<!--//About-->
+<!--services-->
+<div class="services" id="services">
+	<div class="container">
+		<h3 class="title clr">在线约车</h3>
+
+		<div class="banner-bottom-girds ">
+			<div class="col-md-4  col-sm-6 col-xs-6  its-banner-grid">
+				<div class=" left-icon-grid">
+					<span class="fa fa-history banner-icon" aria-hidden="true"></span>
+				</div>
+				<div class=" white-shadow">
+					<h4>Pets Food</h4>
+					<p>
+						tur aut.maiores alias consequatur .</p>
+					<div class="clearfix"> </div>
+				</div>
+			</div>
+			<div class="col-md-4  col-sm-6 col-xs-6  its-banner-grid">
+				<div class=" left-icon-grid">
+					<span class="fa fa-thumbs-o-up  banner-icon" aria-hidden="true"></span>
+				</div>
+				<div class=" white-shadow">
+					<h4>Ear Cleaning</h4>
+					<p>
+						tur aut.maiores alias consequatur .</p>
+					<div class="clearfix"> </div>
+				</div>
+			</div>
+			<div class="col-md-4  col-sm-6 col-xs-6  its-banner-grid">
+				<div class=" left-icon-grid">
+					<span class="fa fa-check banner-icon" aria-hidden="true"></span>
+				</div>
+				<div class=" white-shadow">
+					<h4>Dog Wakling</h4>
+					<p>
+						tur aut.maiores alias consequatur .</p>
+					<div class="clearfix"> </div>
+				</div>
+			</div>
+			<div class="col-md-4 col-sm-6 col-xs-6  its-banner-grid">
+				<div class=" left-icon-grid">
+					<span class="fa fa-medkit banner-icon" aria-hidden="true"></span>
+				</div>
+				<div class="white-shadow">
+					<h4>24 Hour Care</h4>
+					<p>tur aut.maiores alias consequatur </p>
+				</div>
+				<div class="clearfix"> </div>
+			</div>
+			<div class="col-md-4  col-sm-6 col-xs-6  its-banner-grid">
+				<div class="left-icon-grid">
+					<span class="fa fa-eye banner-icon" aria-hidden="true"></span>
+				</div>
+				<div class=" white-shadow">
+					<h4>Veterinary Help</h4>
+					<p>tur aut.maiores alias consequatur .</p>
+					<div class="clearfix"> </div>
+				</div>
+			</div>
+			<div class="col-md-4 col-sm-6 col-xs-6  its-banner-grid">
+				<div class=" left-icon-grid">
+					<span class="fa fa-clock-o banner-icon" aria-hidden="true"></span>
+				</div>
+				<div class=" white-shadow">
+					<h4>Visting Hours</h4>
+					<p>tur aut.maiores alias consequatur
+					</p>
+				</div>
+				<div class="clearfix"> </div>
+			</div>
+			<div class="clearfix"> </div>
+		</div>
+	</div>
+</div>
+<!--//services-->
+<div class="portfolio" id="gallery">
+
+	<h3 class="title">科目简介</h3>
+
+	<div class="sap_tabs">
+		<div id="horizontalTab">
+			<ul class="resp-tabs-list">
+				<li class="resp-tab-item"><span>科目一</span></li>
+				<li class="resp-tab-item"><span>科目二</span></li>
+				<li class="resp-tab-item"><span>科目三</span></li>
+				<li class="resp-tab-item"><span>科目四</span></li>
+			</ul>
+			<div class="clearfix"> </div>
+			<div class="resp-tabs-container">
+				<div class="tab-1 resp-tab-content">
+					<div class="col-md-3 col-sm-3 col-xs-6 portfolio-grids">
+						<div class="gallery-grid">
+							<img src='images/g1.jpg' data-big-src='images/g1.jpg' class="img-responsive" alt=" " />
+							<p style='opacity:0;display:none'>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+						</div>
+					</div>
+					<div class="col-md-3 col-sm-3 col-xs-6 portfolio-grids">
+						<div class="gallery-grid">
+							<img src='images/g2.jpg' data-big-src='images/g2.jpg' class="img-responsive" alt=" " />
+							<p style='opacity:0;display:none'>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+						</div>
+					</div>
+					<div class="col-md-3 col-sm-3 col-xs-6 portfolio-grids">
+						<div class="gallery-grid">
+							<img src='images/g10.jpg' data-big-src='images/g10.jpg' class="img-responsive" alt=" " />
+							<p style='opacity:0;display:none'>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+						</div>
+					</div>
+					<div class="col-md-3 col-sm-3 col-xs-6 portfolio-grids">
+						<div class="gallery-grid">
+							<img src='images/g4.jpg' data-big-src='images/g4.jpg' class="img-responsive" alt=" " />
+							<p style='opacity:0;display:none'>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+						</div>
+					</div>
+					<div class="col-md-3 col-sm-3 col-xs-6  portfolio-grids">
+						<div class="gallery-grid">
+							<img src='images/g5.jpg' data-big-src='images/g5.jpg' class="img-responsive" alt=" " />
+							<p style='opacity:0;display:none'>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+						</div>
+					</div>
+
+					<div class="col-md-3 col-sm-3 col-xs-6 portfolio-grids">
+						<div class="gallery-grid">
+							<img src='images/g6.jpg' data-big-src='images/g6.jpg' class="img-responsive" alt=" " />
+							<p style='opacity:0;display:none'>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+						</div>
+					</div>
+					<div class="col-md-3 col-sm-3 col-xs-6 portfolio-grids">
+						<div class="gallery-grid">
+							<img src='images/g8.jpg' data-big-src='images/g8.jpg' class="img-responsive" alt=" " />
+							<p style='opacity:0;display:none'>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+						</div>
+					</div>
+					<div class="col-md-3 col-sm-3 col-xs-6 portfolio-grids">
+						<div class="gallery-grid">
+							<img src='images/g11.jpg' data-big-src='images/g11.jpg' class="img-responsive" alt=" " />
+							<p style='opacity:0;display:none'>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+						</div>
+					</div>
+					<div class="clearfix"> </div>
+				</div>
+				<div class="tab-1 resp-tab-content">
+					<div class="col-md-3 col-sm-3 col-xs-6 portfolio-grids">
+						<div class="gallery-grid">
+							<img src='images/g1.jpg' data-big-src='images/g1.jpg' class="img-responsive" alt=" " />
+							<p style='opacity:0;display:none'>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+						</div>
+					</div>
+					<div class="col-md-3 col-sm-3 col-xs-6 portfolio-grids">
+						<div class="gallery-grid">
+							<img src='images/g10.jpg' data-big-src='images/g10.jpg' class="img-responsive" alt=" " />
+							<p style='opacity:0;display:none'>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+						</div>
+					</div>
+					<div class="col-md-3 col-sm-3 col-xs-6 portfolio-grids">
+						<div class="gallery-grid">
+							<img src='images/g8.jpg' data-big-src='images/g8.jpg' class="img-responsive" alt=" " />
+							<p style='opacity:0;display:none'>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+						</div>
+					</div>
+					<div class="col-md-3 col-sm-3 col-xs-6 portfolio-grids">
+						<div class="gallery-grid">
+							<img src='images/g11.jpg' data-big-src='images/g11.jpg' class="img-responsive" alt=" " />
+							<p style='opacity:0;display:none'>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+						</div>
+					</div>
+					<div class="clearfix"> </div>
+				</div>
+
+				<div class="tab-1 resp-tab-content">
+					<div class="col-md-3 col-sm-3 col-xs-6 portfolio-grids">
+						<div class="gallery-grid">
+							<img src='images/g5.jpg' data-big-src='images/g5.jpg' class="img-responsive" alt=" " />
+							<p style='opacity:0;display:none'>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+						</div>
+					</div>
+					<div class="col-md-3 col-sm-3 col-xs-6 portfolio-grids">
+						<div class="gallery-grid">
+							<img src='images/g7.jpg' data-big-src='images/g7.jpg' class="img-responsive" alt=" " />
+							<p style='opacity:0;display:none'>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+						</div>
+					</div>
+
+					<div class="col-md-3 col-sm-3 col-xs-6 portfolio-grids">
+						<div class="gallery-grid">
+							<img src='images/g6.jpg' data-big-src='images/g6.jpg' class="img-responsive" alt=" " />
+							<p style='opacity:0;display:none'>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+						</div>
+					</div>
+					<div class="col-md-3 col-sm-3 col-xs-6 portfolio-grids">
+						<div class="gallery-grid">
+							<img src='images/g7.jpg' data-big-src='images/g7.jpg' class="img-responsive" alt=" " />
+							<p style='opacity:0;display:none'>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+						</div>
+					</div>
+					<div class="clearfix"> </div>
+				</div>
+				<div class="tab-1 resp-tab-content">
+					<div class="col-md-3 col-sm-3 col-xs-6 portfolio-grids">
+						<div class="gallery-grid">
+							<img src='images/g2.jpg' data-big-src='images/g2.jpg' class="img-responsive" alt=" " />
+							<p style='opacity:0;display:none'>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+						</div>
+					</div>
+					<div class="col-md-3 col-sm-3 col-xs-6 portfolio-grids">
+						<div class="gallery-grid">
+							<img src='images/g6.jpg' data-big-src='images/g6.jpg' class="img-responsive" alt=" " />
+							<p style='opacity:0;display:none'>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+						</div>
+					</div>
+					<div class="col-md-3 col-sm-3 col-xs-6 portfolio-grids">
+						<div class="gallery-grid">
+							<img src='images/g4.jpg' data-big-src='images/g4.jpg' class="img-responsive" alt=" " />
+							<p style='opacity:0;display:none'>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+						</div>
+					</div>
+					<div class="col-md-3 col-sm-3 col-xs-6 portfolio-grids">
+						<div class="gallery-grid">
+							<img src='images/g7.jpg' data-big-src='images/g7.jpg' class="img-responsive" alt=" " />
+							<p style='opacity:0;display:none'>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+						</div>
+					</div>
+
+					<div class="clearfix"> </div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- //portfolio -->
+<!--price table-->
+<div class="price-table" id="price">
+	<div class="container">
+		<h3 class="title clr ">驾校推荐</h3>
+
+		<div class="agileits-banner-grids text-center">
+
+			<div class="col-md-4  col-sm-4  col-xs-4 clr1 agileits-banner-grid">
+
+				<h4>Lorem ipsum</h4>
+				<div class="table_cost">
+					<span class="cost clr-price"> 260$</span>
+				</div>
+				<div class="list-price">
+					<ul>
+						<li>Bengal cat</li>
+						<li>Russian Cat</li>
+						<li>Maine Cat</li>
+						<li>Perian Cat</li>
+					</ul>
+				</div>
+				<a class="w3_play_icon1" href="#" data-toggle="modal" data-target="#myModal">现在登录</a>
+			</div>
+			<div class="col-md-4 col-sm-4 col-xs-4  clr2 agileits-banner-grid">
+
+				<h4>Dolor ipsum</h4>
+				<div class="table_cost">
+					<span class="cost"> 150$</span>
+				</div>
+				<div class="list-price">
+					<ul>
+						<li>Bengal cat</li>
+						<li>Russian Cat</li>
+						<li>Maine Cat</li>
+						<li>Perian Cat</li>
+					</ul>
+				</div>
+				<a class="w3_play_icon1" href="#" data-toggle="modal" data-target="#myModal">现在登录</a>
+			</div>
+			<div class=" col-md-4 col-sm-4 col-xs-4 clr3 agileits-banner-grid">
+
+				<h4>Lorem ipsum</h4>
+				<div class="table_cost">
+					<span class="cost clr-price "> 90$</span>
+				</div>
+				<div class="list-price">
+					<ul>
+						<li>Bengal cat</li>
+						<li>Russian Cat</li>
+						<li>Maine Cat</li>
+						<li>Perian Cat</li>
+					</ul>
+				</div>
+				<a class="w3_play_icon1" href="#" data-toggle="modal" data-target="#myModal">现在登录</a>
+			</div>
+			<div class="clearfix"></div>
+
+		</div>
+
+	</div>
+</div>
+<!--//price table-->
+<!-- testimonials -->
+<div class="testimonials" id="testimonials">
+	<div class="container">
+
+		<h3 class="title">教练风采</h3>
+
+		<div class="carousel slide" data-ride="carousel" id="quote-carousel">
+			<!-- Bottom Carousel Indicators -->
+			<ol class="carousel-indicators">
+				<li data-target="#quote-carousel" data-slide-to="0" class="active"><img class="img-responsive " src="images/t1.jpg" alt="">
+				</li>
+				<li data-target="#quote-carousel" data-slide-to="1"><img class="img-responsive" src="images/t2.jpg" alt="">
+				</li>
+				<li data-target="#quote-carousel" data-slide-to="2"><img class="img-responsive" src="images/t3.jpg" alt="">
+				</li>
+			</ol>
+
+			<!-- Carousel Slides / Quotes -->
+			<div class="carousel-inner text-center">
+
+				<!-- Quote 1 -->
+				<div class="item active">
+					<blockquote>
+						<div class="row">
+							<div class=" left-matter">
+								<p>毕教练面对教练这一特殊的工作，虽然感觉辛苦，很有压力，但他快乐的面对挑战，取得了一定的成绩，教学中严格施教，发挥他的优势，对学员细致体贴，耐心指导，受到学员的一致好评，为此很多学员拿到驾驶证后与他成为好朋友。他的一次性考试合格率为93.6%。</p>
+								<h5>毕教练</h5>
+							</div>
+
+
+						</div>
+					</blockquote>
+				</div>
+				<!-- Quote 2 -->
+				<div class="item">
+					<blockquote>
+						<div class="row">
+							<div class=" left-matter">
+
+								<p>李教练，从事多年教练，弟子几百名，安全教学，为了让学员有更多的上车机会，不惜牺牲个人休息时间。有个学员，没时间完整的车，他就起早贪黑的让学员加班加点的，最终顺利拿证。</p>
+								<h5>李教练</h5>
+							</div>
+						</div>
+					</blockquote>
+				</div>
+				<!-- Quote 3 -->
+				<div class="item">
+					<blockquote>
+						<div class="row">
+							<div class=" left-matter">
+
+								<p>“不求最好，只求更好”一直是夏教练的工作原则。他在施教中总是因人而异，不搞统一模式，总会坐在副驾驶室内或站在车旁，不轻易离开教练车与学员半步。培训时细心观察，发现错误及时提出。为社会输送了千余名合格驾驶员。</p>
+								<h5>夏教练</h5>
+							</div>
+						</div>
+					</blockquote>
+				</div>
+			</div>
+
+			<!-- Carousel Buttons Next/Prev
+                <a data-slide="prev" href="#quote-carousel" class="left carousel-control"><span class="fa fa-chevron-left"></span></a>
+                <a data-slide="next" href="#quote-carousel" class="right carousel-control"><span class="fa fa-chevron-right"></span></a> -->
+		</div>
+	</div>
+</div>
+<!-- testimonials -->
+
+<!--contact-->
+<div class="contact" id="contact">
+	<div class="container">
+		<h3 class="title clr">联系我们</h3>
+		<div class=" col-md-8 col-sm-8 col-xs-7 contact-map">
+			<div class="map-grid" id="dituContent" style="height: 400px;"></div>
+		</div>
+		<script type="text/javascript" src="http://api.map.baidu.com/api?key=&v=1.1&services=true"></script>
+		<script type="text/javascript" language="javasrcipt">
+			//创建和初始化地图函数：
+			function initMap(){
+				createMap();//创建地图
+				setMapEvent();//设置地图事件
+				addMapControl();//向地图添加控件
+				addMarker();//向地图中添加marker
+			}
+
+			//创建地图函数：
+			function createMap(){
+				var map = new BMap.Map("dituContent");//在百度地图容器中创建一个地图
+				var point = new BMap.Point(115.550822,38.873954);//定义一个中心点坐标
+				map.centerAndZoom(point,14);//设定地图的中心点和坐标并将地图显示在地图容器中
+				window.map = map;//将map变量存储在全局
+			}
+
+			//地图事件设置函数：
+			function setMapEvent(){
+				map.enableDragging();//启用地图拖拽事件，默认启用(可不写)
+				map.enableScrollWheelZoom();//启用地图滚轮放大缩小
+				map.enableDoubleClickZoom();//启用鼠标双击放大，默认启用(可不写)
+				map.enableKeyboard();//启用键盘上下左右键移动地图
+			}
+
+			//地图控件添加函数：
+			function addMapControl(){
+				//向地图中添加缩放控件
+				var ctrl_nav = new BMap.NavigationControl({anchor:BMAP_ANCHOR_TOP_LEFT,type:BMAP_NAVIGATION_CONTROL_LARGE});
+				map.addControl(ctrl_nav);
+				//向地图中添加缩略图控件
+				var ctrl_ove = new BMap.OverviewMapControl({anchor:BMAP_ANCHOR_BOTTOM_RIGHT,isOpen:1});
+				map.addControl(ctrl_ove);
+				//向地图中添加比例尺控件
+				var ctrl_sca = new BMap.ScaleControl({anchor:BMAP_ANCHOR_BOTTOM_LEFT});
+				map.addControl(ctrl_sca);
+			}
+			//标注点数组
+			var markerArr =
+					[{title:"河北软件职业技术学院",content:"这是我的位置",point:"115.550822|38.873954",isOpen:0,icon:{w:21,h:21,l:0,t:0,x:6,lb:5}}];
+			//创建marker
+			function addMarker(){
+				for(var i=0;i<markerArr.length;i++){
+					var json = markerArr[i];
+					var p0 = json.point.split("|")[0];
+					var p1 = json.point.split("|")[1];
+					var point = new BMap.Point(p0,p1);
+					var iconImg = createIcon(json.icon);
+					var marker = new BMap.Marker(point,{icon:iconImg});
+					var iw = createInfoWindow(i);
+					var label = new BMap.Label(json.title,{"offset":new BMap.Size(json.icon.lb-json.icon.x+10,-20)});
+					marker.setLabel(label);
+					map.addOverlay(marker);
+					label.setStyle({
+						borderColor:"#808080",
+						color:"#333",
+						cursor:"pointer"
+					});
+
+					(function(){
+						var index = i;
+						var _iw = createInfoWindow(i);
+						var _marker = marker;
+						_marker.addEventListener("click",function(){
+							this.openInfoWindow(_iw);
+						});
+						_iw.addEventListener("open",function(){
+							_marker.getLabel().hide();
+						})
+						_iw.addEventListener("close",function(){
+							_marker.getLabel().show();
+						})
+						label.addEventListener("click",function(){
+							_marker.openInfoWindow(_iw);
+						})
+						if(!!json.isOpen){
+							label.hide();
+							_marker.openInfoWindow(_iw);
+						}
+					})()
+				}
+			}
+			//创建InfoWindow
+			function createInfoWindow(i){
+				var json = markerArr[i];
+				var iw = new
+				BMap.InfoWindow("<b class='iw_poi_title' title='" + json.title + "'>" + json.title + "</b><div class='iw_poi_content'>"+json.content+"</div>");
+				return iw;
+			}
+			//创建一个Icon
+			function createIcon(json){
+				var icon = new
+				BMap.Icon("http://app.baidu.com/map/images/us_mk_icon.png",
+						new BMap.Size(json.w,json.h),
+						{imageOffset: new BMap.Size(-json.l,-json.t),infoWindowOffset:new BMap.Size(json.lb+5,1),
+							offset:new BMap.Size(json.x,json.h)})
+				return icon;
+			}
+			initMap();//创建和初始化地图
+		</script>
+		<div class=" col-md-4 col-sm-4 col-xs-5 contact-icons">
+			<div class="footer_grid_left">
+				<h5>地址</h5>
+				<p>保定市东风东路999号</p>
+			</div>
+			<div class="footer_grid_left">
+				<h5>联系电话</h5>
+				<p>(0312) 123 4565 32 <span>(0312) 123 4565 35</span></p>
+			</div>
+			<div class="footer_grid_left">
+				<h5>我们的邮箱</h5>
+				<p><a href="mailto:info@example.com">info@example1.com</a>
+					<span><a href="mailto:info@example.com">info@example2.com</a></span></p>
+			</div>
+			<div class="footer_grid_left">
+				<h5>咨询时间</h5>
+				<p>星期一至星期五8：00~18：00
+					<span>周六日及法定节假日9：00~17：00</span></p>
+			</div>
+		</div>
+		<div class="clearfix"> </div>
+		<h3 class="title clr" style="margin-top: 50px;">给我们留言</h3>
+		<div class="contact-us">
+			<form action="#" method="post">
+				<div class="col-md-6 col-sm-6 col-xs-6 styled-input">
+					<input type="text" name="Name" placeholder="姓名" required="">
+				</div>
+				<div class="col-md-6 col-sm-6 col-xs-6 styled-input">
+					<input type="text" name="Last Name" placeholder="问题描述" required="">
+				</div>
+
+				<div class="col-md-6 col-sm-6 col-xs-6 styled-input">
+					<input type="email" name="Email" placeholder="Email" required="">
+
+				</div>
+
+				<div class="col-md-6 col-sm-6 col-xs-6 styled-input">
+
+					<input type="text" name="phone" placeholder="手机号" required="">
+
+				</div>
+				<div class="clearfix"> </div>
+				<div class="styled-input">
+
+					<textarea name="Message" placeholder="亲~请输入您想对我们说的话，您的每一条意见我们都会认真对待呦：）" required=""></textarea>
+				</div>
+				<div>
+					<div class="click">
+						<input type="submit" value="提交">
+					</div>
+				</div>
+			</form>
+		</div>
+
+		<div class="clearfix"> </div>
+	</div>
+</div>
+<footer style="background-color: #fff">
+	<p style="color: #000;">COPYRIGHT © 2015 - 2018 ABOUT CAR ALL RIGHTS RESERVED</p>
+</footer>
+
+<!--js working-->
+<script type='text/javascript' src='js/jquery-2.2.3.min.js'></script>
+<script src="js/bootstrap.js"></script>
+<script src="js/my.js"></script>
+<!-- //js  working-->
+
+<script src="js/responsiveslides.min.js"></script>
+
+<script>
+    $(function () {
+        $("#slider4").responsiveSlides({
+            auto: true,
+            pager: false,
+            nav: true,
+            speed: 900,
+            namespace: "callbacks",
+            before: function () {
+                $('.events').append("<li>before event fired.</li>");
+            },
+            after: function () {
+                $('.events').append("<li>after event fired.</li>");
+            }
+        });
+
+    });
+</script>
+<!--// banner-->
+<!--pop-up-box video-->
+<script src="js/jquery.magnific-popup.js" type="text/javascript"></script>
+<script>
+    $(document).ready(function () {
+        $('.popup-with-zoom-anim').magnificPopup({
+            type: 'inline',
+            fixedContentPos: false,
+            fixedBgPos: true,
+            overflowY: 'auto',
+            closeBtnInside: true,
+            preloader: false,
+            midClick: true,
+            removalDelay: 300,
+            mainClass: 'my-mfp-zoom-in'
+        });
+
+    });
+</script>
+<!-- //pop-up-box video -->
+
+<!-- script for portfolio -->
+<script type='text/javascript' src='js/jquery.easy-gallery.js'></script>
+<script type='text/javascript'>
+    //init Gallery
+    $('.portfolio').easyGallery();
+</script>
+<script src="js/easyResponsiveTabs.js" type="text/javascript"></script>
+<script type="text/javascript">
+    $(document).ready(function () {
+        $('#horizontalTab').easyResponsiveTabs({
+            type: 'default', //Types: default, vertical, accordion
+            width: 'auto', //auto or any width like 600px
+            fit: true // 100% fit in a container
+        });
+    });
+</script>
+<!-- //script for portfolio -->
+<!-- start-smoth-scrolling -->
+<script type="text/javascript" src="js/move-top.js"></script>
+<script type="text/javascript" src="js/easing.js"></script>
+<script type="text/javascript">
+    jQuery(document).ready(function ($) {
+        $(".scroll").click(function (event) {
+            event.preventDefault();
+            $('html,body').animate({
+                scrollTop: $(this.hash).offset().top
+            }, 1000);
+        });
+    });
+</script>
+<!-- start-smoth-scrolling -->
+
+<!-- for-bottom-to-top smooth scrolling -->
+<script type="text/javascript">
+    $(document).ready(function () {
+        $().UItoTop({
+            easingType: 'easeOutQuart'
+        });
+    });
+</script>
+<a href="#" id="toTop" style="display: block;"> <span id="toTopHover" style="opacity: 1;"> </span></a>
+<script>
+    Ajax({
+        type:'GET',
+        url:'ajax.php',
+        data:{
+            'user':'$user',
+            'pwd':'$passWord',
+        },
+        success:function(msg){
+            console.log(msg);
+        },
+        error:function(msg){
+            console.log(msg);
+        }
+    });
+    function Ajax(opt){
+        opt=opt || {}; //opt以数组方式存参，如果参数不存在就为空。
+        opt.type=opt.type || "GET";
+        opt.url=opt.url || ""; //检查URL是否为空
+        opt.async=opt.async || true; //是否异步
+        opt.data ||opt.data || null; //是否发送参数，如POST、GET发送参数
+        opt.success=opt.success || function(){};
+        opt.error=opt.error || function(){};
+        var parmes=[]; //定义1个空数组
+        var xhr=new XMLHttpRequest(); //创建xhr对象
+        for(var key in opt.data){
+            parmes.push(key+"="+opt.data[key]); //将opt里的data存到push里
+        }
+        var sendData=parmes.join("&"); //追加个& params
+        console.log(parmes);
+        if(opt.type.toUpperCase()=='GET'){
+            xhr.open(opt.type,opt.url+'?'+sendData,opt.async); //开始请求
+            xhr.send(null);
+        }else{
+            xhr.open(opt.type,opt.url,opt.async);
+            xhr.setRequestHeader('Content-type','application/x-www-form-urlencoded;charset=utf-8'); //发送头信息，与表单里的一样。
+            xhr.send(sendData);
+        }
+        xhr.onreadystatechange=function(){
+            if(xhr.readyState==4){
+                if(xhr.status==200){
+                    opt.success && opt.success(xhr.responseText);
+                }
+            }else{
+                opt.error && opt.error(xhr.responseText);
+            }
+        }
+    }
+</script>
+
+</body>
+
+</html>
