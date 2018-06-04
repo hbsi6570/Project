@@ -1,0 +1,106 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>聚英才-注册</title>
+<link rel="stylesheet" href="../css/style.css" type="text/css">
+<link rel="stylesheet" href="../css/common.css" type="text/css">
+<meta name="Keywords" content="招聘网">
+<meta name="Description" content="招聘网">
+</head>
+
+<body>
+<div id="logregA">
+	<div class="gwidth logreg">
+		<!--logo-->
+		<a href="index.html" class="logo"><img src="../img/logob.png" alt="" /></a>
+		<!--注册栏目-->
+		<div class="regsiterA">
+			<div class="regsiter clearfix">
+				<!--注册栏目左-->
+				<div class="regsiterl">
+					<!--注册栏目左1-->
+					<div class="wrap">
+						<div class="warp1">   
+    						<ul id="tab_t" class="clearfix gwidth">
+    							<li class="act">手机号码注册</li>
+    							<li>邮箱注册</li>
+  							</ul>
+						</div>
+
+						 <div id="tab_c">
+						 	<div class="clearfix">
+						 		<form action="">
+						 			<input type="text" value="请输入常用手机号码" ><br>
+									<input type="text" value="请输入验证码" style="width:180px;"><!--
+									--><input type="button" value="获取验证码"  style="width:100px; margin-left:0; background-color:#f7b31e; text-align:center; color:#ffffff; font-size:12px; padding-left:0;"><br>
+									<input type="password" value="" placeholder="请输入密码"><br>
+						 		</form>
+						 		<span class="clearfix">
+						 			<a href="job.html" class="a2">找工作</a>
+						 			<a href="person.html" class="a2">找人才</a>
+						 		</span>
+						 		<p>我已阅读并同意<a href="">《聚英才用户协议》</a></p>
+						 		<a href="info.html" class="a3">注册</a>
+						 	</div>
+
+						 	<div class="hide">
+						 		<form action="">
+						 			<input type="text" value="请输入已验证手机/邮箱" ><br>
+									<input type="password" value="" placeholder="请输入密码"><br>
+									<input type="password" value="" placeholder="请确认密码"><br>
+						 		</form>
+						 		<span class="clearfix">
+						 			<a href="job.html" class="a2">找工作</a>
+						 			<a href="person.html" class="a2">找人才</a>
+						 		</span>
+						 		<p>我已阅读并同意<a href="">《聚英才用户协议》</a></p>
+						 		<a href="info.html" class="a3">注册</a>
+						 	</div>
+					</div></div>
+				</div>
+				<!--注册栏目右-->
+				<div class="regsiterr">
+					<p>已有账号</p>
+					<a href="login.html" class="a1">直接登录</a>
+					<p style="padding-top:40px; margin-left:66px;">使用以下账号直接登录</p>
+					<a class="a2" href="" style="margin-left:49px;"><img src="../img/qq.png" alt="" /></a>
+					<a class="a2" href=""><img src="../img/wexin.png" alt="" /></a>
+					<a class="a2" href=""><img src='../img/xin.png' alt="" /></a>
+                	<img class="img1" src="../img/erweima.png" alt="" title="" />
+                	<p>【QQ扫码登录】</p>
+				</div>
+
+			</div>
+		</div>
+		<script>
+window.onload = function(){
+
+    tab("tab_t","li","tab_c","div","onmouseover")
+    function tab(tab_t,tab_t_tag,tab_c,tag_c_tag,evt){
+        var tab_t = document.getElementById(tab_t);
+        var tab_t_li = tab_t.getElementsByTagName(tab_t_tag);
+        var tab_c = document.getElementById(tab_c);
+        var tab_c_li = tab_c.getElementsByTagName(tag_c_tag);
+        var len = tab_t_li.length;
+        var i=0;
+        for(i=0; i<len; i++){
+            tab_t_li[i].index = i;
+            tab_t_li[i][evt] = function(){
+                for(i=0; i<len; i++){
+                    tab_t_li[i].className = '';
+                    tab_c_li[i].className = 'hide';
+                }
+                tab_t_li[this.index].className = 'act';
+                tab_c_li[this.index].className = '';
+            }
+        }
+    }
+    
+}
+</script>
+<p class="p1">—— 专注互联网职业机会 ——</p>
+</div></div>
+
+</body>
+</html>

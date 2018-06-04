@@ -1,0 +1,325 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>聚英才--人才详细信息</title>
+<link rel="stylesheet" href="../css/style.css" type="text/css">
+<link rel="stylesheet" href="../css/common.css" type="text/css">
+<meta name="Keywords" content="招聘网">
+<meta name="Description" content="招聘网">
+</head>
+
+<body>
+<!--nav-->
+<nav class="gwidth clearfix">
+	<a href="index.html" class="logo"><img src="../img/biao.png" alt="" /></a>
+	<ul class="nav1 clearfix">
+		<li><a href="index.html">首页</a></li>
+		<li><a href="job.html">找工作</a></li>
+		<li><a href="person.html">找人才</a></li>
+		<li><a href="school.html">校园资讯</a></li>
+		<li><a href="news.html">职场风云 </a></li>
+	</ul>
+	<ul class="nav2 clearfix">
+		<li><a href="regsiter.html">免费注册<span>|</span></a></li>
+		<li><a href="login.html">会员登录<span>|</span></a></li>
+		<li><a href="regsiter.html">企业入驻<span>|</span></a></li>
+		<li><a href="login.html">企业登录</a></li>
+	</ul>
+</nav>
+<!--banner-->
+<div id="banner">
+        <ul id="lunbo">
+            <li style="opacity:1"><img src="../img/banner1.png" alt="" ></li>
+            <li><img src="../img/banner2.png" alt="" ></li>
+            <li><img src="../img/banner3.png" alt="" ></li>
+            <li><img src="../img/banner4.png" alt="" ></li>
+ 
+        </ul>
+        <ul id="anniu">
+            <li class="d"></li>
+            <li class=""></li> 
+            <li class=""></li> 
+            <li class=""></li>        
+        </ul>
+</div>
+
+    <script type="text/javascript">
+    var tu=document.getElementById("lunbo").getElementsByTagName("li");
+    var an=document.getElementById("anniu").getElementsByTagName("li");
+    window.onload=function(){
+        for(i=0;i<an.length;i++){
+            an[i].index=i;
+            an[i].onclick=function(){
+                for(j=0;j<an.length;j++){
+                    tu[j].style.opacity=0;
+                    an[j].className="";
+                }
+            this.className="d";
+            var t=this.index;
+            m=t;
+            tu[t].style.opacity=1;
+
+            }
+        }
+    }
+    var m=0;
+    function zidong(){
+        for(j=0;j<an.length;j++){
+                    tu[j].style.opacity=0;
+                    an[j].className="";
+        }
+        if(m==tu.length){
+            m=0;
+
+        }
+        an[m].className="d";
+        tu[m].style.opacity=1;
+        m++;
+
+    }
+    setInterval("zidong()",3000)
+    </script>
+ <!--zhong-->
+ <div class="center gwidth clearfix">
+ <!--公共样式左-->
+ 	<div class="cennterI">
+ 		<!--热门话题-->
+ 		<div class="topic">
+ 			<div class="top">
+ 				<a href="#">热门话题</a>
+ 			</div>
+ 			<ul>
+ 				<li><a href="#">先看懂你的工资单再考虑要二孩...</a></li>
+ 				<li><a href="#">HR如何应对员工生育问题？</a></li>
+ 				<li><a href="#">重磅 | 公积金新政再次出台，捷...</a></li>
+ 				<li><a href="#">干货！HR应该去了解的158个新媒...</a></li>
+ 				<li><a href="#">月入三至八千 顺丰快递高薪人...</a></li>
+ 				<li><a href="#">每天负责吃水果  年薪可拿30万...</a></li>
+ 				<li><a href="#">周一看到别人家的福利，想死的...</a></li>
+ 				<li><a href="#">被双11屠杀了的设计师</a></li>
+ 			</ul>
+ 		</div>
+ 		<!--职位分类-->
+ 		<div class="position">
+ 			<div class="top">
+ 				<a href="#">找工作</a>
+ 			</div>
+ 			<ul>
+ 				<li><a href="#">前端工程师</a></li>
+ 				<li><a href="#">淘宝美工</a></li>
+ 				<li><a href="#">优化与推广</a></li>
+ 				<li><a href="#">全网</a></li>
+ 				<li><a href="#">PHP后台</a></li>
+ 				<li><a href="#">电商运营</a></li>
+ 				<li><a href="#">前端工程师</a></li>
+ 				<li><a href="#">淘宝美工</a></li>
+ 				<li><a href="#">优化与推广</a></li>
+ 				<li><a href="#">全网</a></li>
+ 				<li><a href="#">PHP后台</a></li>
+ 				<li><a href="#">电商运营</a></li>
+ 				<li><a href="#">前端工程师</a></li>
+ 			</ul>
+ 		</div>
+ 	</div>
+
+ <!--公共样式右-->
+	<div class="centerR">
+		 <!--公共样式右上1-->
+		 <div class="form">
+		 	<form action="" class="clearfix">
+		 		<input type="text" value="关键词搜索" style=" padding-left: 10px; width:722px; height:33px; border:2px solid #f6c51b; color:#f7c11c; font-size:18px; font-family: "微软雅黑";"><!--
+		 		--> <input type="button" value="搜索" style="width:74px; height:37px; background-color:#f6c51b; margin-left:21px; color:#ffffff; font-size:16px; font-family: "微软雅黑";">
+		 	</form>
+		 	<ul class="clearfix">
+		 		<li>热门搜索:</li>
+		 		<li><a href="#">网页设计</a></li>
+		 		<li><a href="#">前端开发</a></li>
+		 		<li><a href="#">网站维护</a></li>
+		 		<li><a href="#"网站优化推广></a></li>
+		 		<li><a href="#">美工</a></li>
+		 		<li><a href="#">店铺运营</a></li>
+		 	</ul>
+		 </div>
+		<!--公共样式右上2--> 		
+		<div class="caseb">
+		<script type="text/javascript" src="../js/dom.js"></script> 
+		<div id="demo" onmousemove="MoveDiv(event);" onmouseout="MoveOutDiv();">       
+    		<div id="demo1" style="width:100%;">
+       		<table cellSpacing=0 cellPadding=0>
+            		<tbody>
+             		<tr vAlign=top>
+                 		<td vAlign=top noWrap>
+                    		<div align=right>
+                        		<img src="../img/d1.png"> 
+                        		<img src="../img/d2.png"> 
+                        		<img src="../img/d3.png"> 
+                        		<img src="../img/d4.png"> 
+                        		<img src="../img/d5.png"> 
+                        		<img src="../img/d3.png"> 
+                        		<img src="../img/d1.png">
+                        		<img src="../img/d2.png">
+     				 		</div></td></tr></tbody></table></td>
+      		<td width="0">
+        		<div id="demo2" style="width:100%;"></div>
+      		</td>
+     		</tr></tbody></table>
+		</div></div></div>
+<!--公共样式结束-->
+
+    <!--内页样式-->
+        <div id="person-ny">
+            <h4>详细信息</h4>
+            <ul class="clearfix">
+            	<li>
+                	<img src="../img/jian.png" alt="" />
+                </li>
+                <li>
+                	<span class="j1">张先生</span>
+                	<span class="j2">手机认证</span>
+                    <span class="j3">微信认证</span><br />
+                    <span class="j4" style="padding-left:0;">男</span>
+                    <span class="j4">23岁</span>
+                    <span class="j4">大专</span>
+                    <span class="j4">保定人</span>
+                    <span class="j4">1-2年经验</span>
+                    <span class="j4" style="border-right:none;">专业前端</span>
+                    <p>交友达人    踏实肯干    适应能力强   有责任心 </p>
+                    <div class="jj">
+                        <p>期待职位：<span>网页设计/制作、WEB前端开发</span></p>
+                        <p>期待地点：<span>保定      北京开发</span></p>
+                        <p>期待薪资：<span>3000-5000元 / 月</span></p>
+                    </div>
+                </li>
+            </ul>
+            
+            <div class="g">
+            	<h5>工作经验</h5>
+                <p class="p1">网联互通<br />工作时间：2015年10月-2016年09月（11个月）<br />薪资水平：保密<br />在职职位：web前端开发<br />工作职责：1.主要负责编写html代码，利用js、jQuery等实现特效，解决不同浏览器之间的兼容问题。<br />                 　　　　　2.利用ajax与后端配合，进行数据逻辑的走通，完成数据交互、动态信息展现等。“</p>
+                <p class="p2">中软国际<br />工作时间：2015年07月-2015年09月（7个月）<br />薪资水平：保密<br />在职职位：web前端助教<br />工作职责：我曾在中软参加培训期间，担任过助教的工作，负责学员们的学习监督，解决各种问题。</p>
+                
+                <div class="g1">
+                	<h5>专业技能</h5>
+                    <ul class="clearfix">
+                    	<li>Dreamweaver</li>
+                        <li>
+                        	<div class="g2"><div class="g3"></div></div>
+                        </li>
+                        <li>熟练（1年经验）</li>
+                    </ul>
+                    
+                    <ul class="clearfix">
+                    	<li>Photoshop</li>
+                        <li>
+                        	<div class="g2"><div class="g3"></div></div>
+                        </li>
+                        <li>熟练（1年经验）</li>
+                    </ul> 
+                    
+                    <ul class="clearfix">
+                    	<li>HTML</li>
+                        <li>
+                        	<div class="g2"><div class="g3"></div></div>
+                        </li>
+                        <li>熟练（1年经验）</li>
+                    </ul> 
+                    
+                    <ul class="clearfix">
+                    	<li>CSS+DIV</li>
+                        <li>
+                        	<div class="g2"><div class="g3"></div></div>
+                        </li>
+                        <li>熟练（1年经验）</li>
+                    </ul> 
+                    
+                    <ul class="clearfix">
+                    	<li>JavaScript</li>
+                        <li>
+                        	<div class="g2"><div class="g3"></div></div>
+                        </li>
+                        <li>熟练（1年经验）</li>
+                    </ul> 
+                    
+                    <ul class="clearfix">
+                    	<li>jquery</li>
+                        <li>
+                        	<div class="g2"><div class="g3"></div></div>
+                        </li>
+                        <li>熟练（1年经验）</li>
+                    </ul>
+                    
+                    <ul class="clearfix">
+                    	<li>Hbuilder</li>
+                        <li>
+                        	<div class="g2"><div class="g3"></div></div>
+                        </li>
+                        <li>熟练（1年经验）</li>
+                    </ul>  
+                </div>
+                
+            </div>
+        </div>    
+
+<!--内页样式结束-->
+</div></div>
+
+
+<!--底部-->
+<div id="bottomA">
+    <div class="bottom">
+        <div class="botop">
+        <div class="clearfix gwidth">
+            <a href="index.html" class="logo"><img src="../img/logo1.png" alt="" /></a>
+            <ul class="clearfix">
+                <li>
+                    <p>合作伙伴</p>
+                    <a href="#">安居客</a>
+                    <a href="#">驾校一点通</a>
+                    <a href="#">中华英才网</a>
+                    <a href="#">聚英才</a>
+                </li>
+
+                <li>
+                    <p>帮助中心</p>
+                    <a href="#">常见问题</a>
+                    <a href="#">更多帮助</a>
+                    <a href="#">意见反馈</a>
+                </li>
+
+                <li>
+                    <p>关于我们</p>
+                    <a href="#">新浪微博</a>
+                    <a href="#">官方微信</a>
+                </li>
+
+                <li>
+                    <p>服务支持</p>
+                    <a href="#">推广服务</a>
+                    <a href="#">渠道招商</a>
+                    <a href="#">先行赔付</a>
+                    <a href="#">举报平台</a>
+                </li>
+            </ul>
+        </div></div>
+        <!--bottom下-->
+        <div class="boxia gwidth">
+            <ul class="clearfix u1">
+                <li>友情链接：</li>
+                <li><a href="#">保定公交<span>|</span></a></li>
+                <li><a href="#">保定汽车网<span>|</span></a></li>
+                <li><a href="#">保定房产网<span>|</span></a></li>
+                <li><a href="#">更多...</a></li>
+            </ul>
+            <p>京公网备案信息110105000809|京ICP证060405|京ICP备10012705号-2|乙测资字11018014|Investor Relations|违法信息举报：4008135858  jubao@58ganji.com|反欺诈联盟|员工舞弊举报：wb@58.com</p>
+            <ul class="u2 clearfix">
+                <li><a href="#"><img src="../img/y1.jpg" alt="" /></a></li>
+                <li><a href="#"><img src="../img/y2.jpg" alt="" /></a></li>
+                <li><a href="#"><img src="../img/y3.jpg" alt="" /></a></li>
+                <li><a href="#"><img src="../img/y4.jpg" alt="" /></a></li>
+                <li><a href="#"><img src="../img/y5.jpg" alt="" /></a></li>
+                <li><a href="#"><img src="../img/y6.jpg" alt="" /></a></li>
+            </ul>
+        </div>
+</div></div>
+</body>
+</html>
