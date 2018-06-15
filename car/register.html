@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title></title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><meta name="keywords" content="Tab Widget Form template Responsive, Login form web template,Flat Pricing tables,Flat Drop downs  Sign up Web Templates, Flat Web Templates, Login sign up Responsive web template, SmartPhone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyEricsson, Motorola web design" />
+<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+<link href="css/form.css" rel="stylesheet" type="text/css" media="all" />
+<script src="js/jquery-2.2.3.min.js"></script>
+<script src="js/easyResponsiveTabs.js" type="text/javascript"></script>
+	<script type="text/javascript">
+		$(document).ready(function () {
+			$('#horizontalTab').easyResponsiveTabs({
+				type: 'default', //Types: default, vertical, accordion           
+				width: 'auto', //auto or any width like 600px
+				fit: true   // 100% fit in a container
+			});
+		});
+	   </script>
+	<script type="text/javascript">
+        $(function () {
+            //获取短信验证码
+            var validCode = true;
+            $(".msgs").click(function (event) {
+                var myreg = /^(((13[0-9]{1})|(15[0-9]{1})|(18[0-9]{1}))+\d{8})$/;
+                if (!myreg.test($("#phone").val())) {
+                    alert("手机号码不合法！");
+                    $("#phone").focus();
+                    return false;
+                }
+                var time = 30;
+                var code = $(this);
+                if (validCode) {
+                    validCode = false;
+                    code.addClass("msgs1");
+                    var t = setInterval(function () {
+                        time--;
+                        code.html(time + "秒");
+                        if (time == 0) {
+                            clearInterval(t);
+                            code.html("重新获取");
+                            validCode = true;
+                            code.removeClass("msgs1");
+                        }
+                    }, 1000);
+                    $.ajax({url: "reg/send_code.php", data: {phone: $("#phone").val()}});
+                }
+            });
+            $("#check").click(function () {
+                var code = $("#code").val();
+                if (code == '') {
+                    alert("验证码不为空");
+                    return false;
+                }
+                else {
+                    $.ajax({
+                        url: "reg/check_code.php",
+                        data: {code: $("#code").val()},
+                        success: function (data) {
+                            alert(data);
+                            if (data == "successful") {
+                                location.href = "./index.php";
+                            }
+                            else if(data == "fail"){
+                                alert("验证码错误");
+                            }
+                        }
+                    });
+                }
+            });
+        })
+	</script>
+<!--//js-->
+</head>
+<body>
+	<!-- main -->
+	<div class="main">
+		<h1>驾校约车平台注册</h1>
+		<div class="main-info">
+			<div class="sap_tabs">
+				<div id="horizontalTab" style="display: block; width: 100%; margin: 0px;">
+					<ul class="resp-tabs-list">
+						<li class="resp-tab-item" aria-controls="tab_item-0" role="tab"><h2><span>学员注册</span></h2></li>
+						<li class="resp-tab-item" aria-controls="tab_item-1" role="tab"><span>教练注册</span></li>
+						<div class="clear"> </div>
+					</ul>				  	 
+					<div class="resp-tabs-container">
+						<div class="tab-1 resp-tab-content" aria-labelledby="tab_item-0">
+							<div class="login-top">
+								<form>
+									<input type="text" class="name active" placeholder="昵称" required=""/>
+									<input type="text" class="email" id="phone" placeholder="手机号" required=""/>
+									<span class="msgs">获取短信验证码</span>
+									<input type="password" class="yzm" name="code" id="code" placeholder="请输入验证码" required=""/>
+									<input type="password" class="password" placeholder="密码" required=""/>
+									<input type="checkbox" id="brand1" value="">
+									<label for="brand1"><span></span>已阅读注册条款</label>
+								</form>
+								<div id="divMsgBack"></div>
+								<div id="divMsg">
+									<a id="aClose" href="javascript:;" onclick="document.body.id = '';">X</a>
+									<b style="font-size:20px; text-align: center;">【注册协议】</b><br />
+									<p style="font-size:16px;">【审慎阅读】您在申请注册流程中点击同意前，应当认真阅读以下协议。请您务必审慎阅读、充分理解协议中相关条款内容，其中包括：<br />
+										1、与您约定免除或限制责任的条款；<br />
+										2、与您约定法律适用和管辖的条款；<br />
+										3、其他重要条款。<br />
+										如您对协议有任何疑问，可向平台客服咨询。<br />
+										【特别提示】当您按照注册页面提示填写信息、阅读并同意协议且完成全部注册程序后，即表示您已充分阅读、理解并接受协议的全部内容。如您因平台服务发生争议的，适用《本服务协议》处理。如您在使用平台服务过程中与其他用户发生争议的，依您与其他用户达成的协议处理。
+										阅读协议的过程中，如果您不同意相关协议或其中任何条款约定，您应立即停止注册程序。<br/>
+									</p>
+								</div>
+								<div class="login-bottom">
+									<ul>
+										<li>
+										</li>
+										<li>
+											<form>
+												<input type="submit" id="check" value="注册"/>
+											</form>
+										</li>
+									<ul>
+									<div class="clear"></div>
+								</div>	
+							</div>
+						</div>
+						<div class="tab-1 resp-tab-content" aria-labelledby="tab_item-1">
+							<div class="login-top sign-top">
+								<form>
+									<input type="text" class="name active" placeholder="工号" required=""/>
+									<input type="password" class="password" placeholder="密码" required=""/>
+									<input type="password" class="email" placeholder="手机号" required=""/>
+                                    <span class="msgs">获取短信验证码</span>
+                                    <input type="password" class="yzm" name="code"  placeholder="请输入验证码" required=""/>
+									<input type="checkbox" id="brand1" value="">
+								</form>
+								<div class="login-bottom">
+									<ul>
+										<li>
+										</li>
+										<li>
+											<form>
+												<input type="submit" value="注册"/>
+											</form>
+										</li>
+									<ul>
+									<div class="clear"></div>
+								</div>	
+							</div>
+						</div>
+					</div>	
+				</div>
+				<div class="clear"> </div>
+			</div>
+		</div>	
+		<!--copyright-->
+		<div class="copyright">
+			<p>Copyright © 2015 - 2018 About Car Inc. All Rights Reserved<a href="index.html">About Car</a></p>
+		</div>
+		<!--//copyright-->
+	</div>	
+</body>
+</html>

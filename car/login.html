@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>驾校约车平台登录</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+<link href="css/form.css" rel="stylesheet" type="text/css" media="all" />
+<script src="js/jquery-2.2.3.min.js"></script>
+<script src="js/easyResponsiveTabs.js" type="text/javascript"></script>
+	<script type="text/javascript">
+		$(document).ready(function () {
+			$('#horizontalTab').easyResponsiveTabs({
+				type: 'default', //Types: default, vertical, accordion           
+				width: 'auto', //auto or any width like 600px
+				fit: true   // 100% fit in a container
+			});
+		});
+	   </script>
+<!--//js-->
+</head>
+<body>
+	<!-- main -->
+	<div class="main">
+		<h1>驾校约车平台登录</h1>
+		<div class="main-info">
+			<div class="sap_tabs">
+				<div id="horizontalTab" style="display: block; width: 100%; margin: 0px;">
+					<ul class="resp-tabs-list">
+						<li class="resp-tab-item" aria-controls="tab_item-0" role="tab"><h2><span>学员登录</span></h2></li>
+						<li class="resp-tab-item" aria-controls="tab_item-1" role="tab"><span>教练登录</span></li>
+						<div class="clear"> </div>
+					</ul>				  	 
+					<div class="resp-tabs-container">
+						<div class="tab-1 resp-tab-content" aria-labelledby="tab_item-0">
+							<div class="login-top">
+								<form>
+									<input type="text" class="name active" placeholder="手机号" required=""/>
+									<input type="password" class="password" placeholder="密码" required=""/>
+									<input type="checkbox" id="brand" value="">
+									<label for="brand"><span></span> 记住密码</label>
+									<label for="brand" style="float: right; color: #999"><span></span>还没有账号？<a href="register.html">立即注册</a></label>
+								</form>
+								<div class="login-bottom">
+									<ul>
+										<li>
+											<a href="forget.html">忘记密码？</a>
+										</li>
+										<li>
+
+                                                <a href="users/index.html"><input type="submit" value="登录"/></a>
+
+										</li>
+									<ul>
+									<div class="clear"></div>
+								</div>	
+							</div>
+						</div>
+						<div class="tab-1 resp-tab-content" aria-labelledby="tab_item-1">
+							<div class="login-top sign-top">
+								<form>
+									<input type="text" class="name active" placeholder="工号 / 手机号" required=""/>
+									<input type="password" class="password" placeholder="密码" required=""/>
+									<input type="checkbox" id="brand1" value="">
+									<label for="brand1"><span></span> 记住密码</label>
+									<label for="brand" style="float: right; color: #999"><span></span>还没有账号？<a href="register.html">立即注册</a></label>
+								</form>
+								<div class="login-bottom">
+									<ul>
+										<li>
+											<a href="forget.html">忘记密码？</a>
+										</li>
+										<li>
+
+                                                <a href="coach/index.html"><input type="submit" value="登录"/></a>
+
+										</li>
+									<ul>
+									<div class="clear"></div>
+								</div>	
+							</div>
+						</div>
+					</div>	
+				</div>
+				<div class="clear"> </div>
+			</div>
+		</div>	
+		<!--copyright-->
+		<div class="copyright">
+			<p>Copyright © 2015 - 2018 About Car Inc. All Rights Reserved<a href="index.html">About Car</a></p>
+		</div>
+		<script>
+            Ajax({
+                type:'GET',
+                url:'ajax.php',
+                data:{
+                    'user':'$user',
+                    'pwd':'$passWord',
+                },
+                success:function(msg){
+                    console.log(msg);
+                },
+                error:function(msg){
+                    console.log(msg);
+                }
+            });
+            function Ajax(opt){
+                opt=opt || {}; //opt以数组方式存参，如果参数不存在就为空。
+                opt.type=opt.type || "GET";
+                opt.url=opt.url || ""; //检查URL是否为空
+                opt.async=opt.async || true; //是否异步
+                opt.data ||opt.data || null; //是否发送参数，如POST、GET发送参数
+                opt.success=opt.success || function(){};
+                opt.error=opt.error || function(){};
+                var parmes=[]; //定义1个空数组
+                var xhr=new XMLHttpRequest(); //创建xhr对象
+                for(var key in opt.data){
+                    parmes.push(key+"="+opt.data[key]); //将opt里的data存到push里
+                }
+                var sendData=parmes.join("&"); //追加个& params
+                console.log(parmes);
+                if(opt.type.toUpperCase()=='GET'){
+                    xhr.open(opt.type,opt.url+'?'+sendData,opt.async); //开始请求
+                    xhr.send(null);
+                }else{
+                    xhr.open(opt.type,opt.url,opt.async);
+                    xhr.setRequestHeader('Content-type','application/x-www-form-urlencoded;charset=utf-8'); //发送头信息，与表单里的一样。
+                    xhr.send(sendData);
+                }
+                xhr.onreadystatechange=function(){
+                    if(xhr.readyState==4){
+                        if(xhr.status==200){
+                            opt.success && opt.success(xhr.responseText);
+                        }
+                    }else{
+                        opt.error && opt.error(xhr.responseText);
+                    }
+                }
+            }
+		</script>
+		<!--//copyright-->
+	</div>	
+</body>
+</html>
